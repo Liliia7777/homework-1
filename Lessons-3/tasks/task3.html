@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 3</h1>
+    <p>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</p>
+    <script>
+
+        let randomNumber = 1 + Math.floor(Math.random()*(5-1+1));
+        let guessNumber1 = parseInt(prompt("Спробуй вгадати число від 1 до 5 за дві спроби"))
+        if(guessNumber1 === randomNumber){
+            document.write(`Ви вгадали!`)
+        }else {
+            let guessNumber2 = parseInt(prompt("Неправильно, спробуй вгадати ще раз"))
+            if (randomNumber === guessNumber2){
+               document.write(`Ви вгадали!`) 
+            }else document.write(`На жаль, Ви не вгадали число.`)
+        }
+    </script>
+</body>
+</html>
